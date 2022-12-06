@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: toot-toot
+  datasource:
+    url: jdbc:h2:mem:toot
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+  jpa:
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: update
+    open-in-view: false
+  h2:
+    console:
+      path: /h2-ui
+      enabled: true
