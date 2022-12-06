@@ -31,7 +31,7 @@ jobs:
         with:
           name: java-app
           path: '${{ github.workspace }}/build/libs/*.jar'
-          echo: '${{ github.workspace }}'
+          run: echo "${{ github.workspace }}"
 
   deploy:
     runs-on: ubuntu-latest
