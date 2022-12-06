@@ -26,12 +26,14 @@ jobs:
         uses: gradle/gradle-build-action@v2.3.3
         
 
+      - name: ECHO 
+        run: echo "${{ github.workspace }}"
+        
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
         with:
           name: java-app
           path: '${{ github.workspace }}/build/libs/*.jar'
-          run: echo "${{ github.workspace }}"
 
   deploy:
     runs-on: ubuntu-latest
